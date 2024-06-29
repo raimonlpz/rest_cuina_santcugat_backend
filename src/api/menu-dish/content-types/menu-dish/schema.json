@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_dishes",
+  "info": {
+    "singularName": "menu-dish",
+    "pluralName": "menu-dishes",
+    "displayName": "Menu Dish",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "price": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "decimal"
+    },
+    "category": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "shared",
+        "sea",
+        "meat",
+        "vegetal",
+        "dessert"
+      ]
+    }
+  }
+}
