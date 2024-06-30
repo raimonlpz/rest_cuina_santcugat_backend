@@ -870,6 +870,46 @@ export interface ApiExperienceExperience extends Schema.SingleType {
   };
 }
 
+export interface ApiGalleryGallery extends Schema.SingleType {
+  collectionName: 'galleries';
+  info: {
+    singularName: 'gallery';
+    pluralName: 'galleries';
+    displayName: 'Gallery';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    grid_1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_3: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_4: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_5: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_6: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_7: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_8: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_9: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    grid_10: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gallery.gallery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gallery.gallery',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -885,8 +925,8 @@ export interface ApiHomeHome extends Schema.SingleType {
     slide_1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slide_2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slide_3: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_4: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    slide_5: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    slide_4: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    slide_5: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slide_6: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slide_7: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slide_8: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -1045,6 +1085,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::address.address': ApiAddressAddress;
       'api::experience.experience': ApiExperienceExperience;
+      'api::gallery.gallery': ApiGalleryGallery;
       'api::home.home': ApiHomeHome;
       'api::menu-dish.menu-dish': ApiMenuDishMenuDish;
       'api::opening.opening': ApiOpeningOpening;

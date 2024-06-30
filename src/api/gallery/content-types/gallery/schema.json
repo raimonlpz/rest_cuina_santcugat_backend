@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "galleries",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Home",
+    "singularName": "gallery",
+    "pluralName": "galleries",
+    "displayName": "Gallery",
     "description": ""
   },
   "options": {
@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "slide_1": {
+    "grid_1": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -23,7 +23,7 @@
         "audios"
       ]
     },
-    "slide_2": {
+    "grid_2": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -34,7 +34,7 @@
         "audios"
       ]
     },
-    "slide_3": {
+    "grid_3": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -45,7 +45,7 @@
         "audios"
       ]
     },
-    "slide_4": {
+    "grid_4": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -56,7 +56,7 @@
         "audios"
       ]
     },
-    "slide_5": {
+    "grid_5": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -67,7 +67,7 @@
         "audios"
       ]
     },
-    "slide_6": {
+    "grid_6": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -78,82 +78,45 @@
         "audios"
       ]
     },
-    "slide_7": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "grid_7": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
-    "slide_8": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "grid_8": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
-    "slide_9": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "grid_9": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
-    "slide_10": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "grid_10": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
-    },
-    "slide_11": {
+      ],
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "slide_12": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "slide_13": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "multiple": false
     }
   }
 }
