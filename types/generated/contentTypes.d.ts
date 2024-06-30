@@ -892,6 +892,7 @@ export interface ApiGalleryGallery extends Schema.SingleType {
     grid_8: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     grid_9: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     grid_10: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    repository: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
