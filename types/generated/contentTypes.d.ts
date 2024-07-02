@@ -794,13 +794,29 @@ export interface ApiAddressAddress extends Schema.SingleType {
     singularName: 'address';
     pluralName: 'addresses';
     displayName: 'Address';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    dir: Attribute.String;
-    city: Attribute.String;
+    dir: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    city: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -816,6 +832,12 @@ export interface ApiAddressAddress extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::address.address',
+      'oneToMany',
+      'api::address.address'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -830,28 +852,66 @@ export interface ApiExperienceExperience extends Schema.SingleType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     experience_block: Attribute.Component<
       'experience-block.experience-block',
       true
-    >;
-    block1_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    block1_img: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     fullwidth_img: Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     block2_img1: Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     block2_img2: Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     block2_img3: Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -867,6 +927,12 @@ export interface ApiExperienceExperience extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::experience.experience',
+      'oneToMany',
+      'api::experience.experience'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -922,20 +988,96 @@ export interface ApiHomeHome extends Schema.SingleType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    slide_1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_3: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_4: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_5: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_6: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_7: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_8: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_9: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_10: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_11: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_12: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide_13: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    slide_1: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_3: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_4: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_5: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_6: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_7: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_8: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_9: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_10: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_11: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_12: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slide_13: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    chefs_block: Attribute.Component<'chefs-block.chefs-block'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -943,6 +1085,12 @@ export interface ApiHomeHome extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::home.home',
+      'oneToMany',
+      'api::home.home'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -978,6 +1126,12 @@ export interface ApiMenuDishMenuDish extends Schema.CollectionType {
     category: Attribute.Enumeration<
       ['shared', 'sea', 'meat', 'vegetal', 'dessert']
     > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    allergens: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

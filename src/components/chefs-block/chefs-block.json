@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_chefs_block_chefs_blocks",
+  "info": {
+    "displayName": "Chefs Block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "overview": {
+      "type": "text"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "raul": {
+      "type": "text"
+    },
+    "murilo": {
+      "type": "text"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
