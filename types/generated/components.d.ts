@@ -8,10 +8,8 @@ export interface ChefsBlockChefsBlock extends Schema.Component {
   };
   attributes: {
     overview: Attribute.Text;
-    headline: Attribute.String;
     raul: Attribute.Text;
     murilo: Attribute.Text;
-    picture: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

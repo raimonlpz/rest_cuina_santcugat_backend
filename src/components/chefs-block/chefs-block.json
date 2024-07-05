@@ -9,25 +9,11 @@
     "overview": {
       "type": "text"
     },
-    "headline": {
-      "type": "string"
-    },
     "raul": {
       "type": "text"
     },
     "murilo": {
       "type": "text"
-    },
-    "picture": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     }
   }
 }
